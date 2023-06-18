@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
 
               await FirebaseStorage.instance
                   .ref('TestC')
-                  .child('image.jpg')
+                  .child(imagePathList[imagePathList.length - 1])
                   .putFile(File(imagePath));
               print('finish');
             },
