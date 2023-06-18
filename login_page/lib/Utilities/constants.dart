@@ -2,5 +2,7 @@ import 'package:flutter/material.dart';
 
 late TextEditingController textEditingControllerForUsername;
 late TextEditingController textEditingControllerForPassword;
+late TextEditingController textEditingControllerForPhoneNumber;
 late FocusNode focusNodeForUsername;
 late FocusNode focusNodeForPassword;
+late FocusNode focusNodeForPhoneNumber;

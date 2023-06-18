@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "469509379966",
+    "project_id": "fb-strg-project",
+    "storage_bucket": "fb-strg-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469509379966:android:5330549b5e53d2fe9e852f",
+        "android_client_info": {
+          "package_name": "com.example.fb_storage_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469509379966-66l3un8fsli38dp7lihc4lggsp5dqfse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7knrXBD3CY4dKnhEBvjn0-04CFX7C1cA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469509379966-66l3un8fsli38dp7lihc4lggsp5dqfse.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

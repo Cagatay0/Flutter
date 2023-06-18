@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/Utilities/constants.dart';
 import 'package:login_page/Widgets/forgot_password_widget.dart';
-import 'package:login_page/Widgets/login_button_widget.dart';
-import 'package:login_page/Widgets/login_text_widget.dart';
+import 'package:login_page/Widgets/general_gradient_button_widget.dart';
+import 'package:login_page/Widgets/general_header_text_widget.dart';
 import 'package:login_page/Widgets/sign_up_button_widget.dart';
 import 'package:login_page/Widgets/textfield_widget.dart';
 
