@@ -56,8 +56,6 @@ class _HomePageState extends State<HomePage> {
             onTap: () async {
               print('start');
               List<String> imagePathList = imagePath.split('/');
-              // print(imagePathList[imagePathList.length - 1]);
-
               await FirebaseStorage.instance
                   .ref('TestC')
                   .child(imagePathList[imagePathList.length - 1])
