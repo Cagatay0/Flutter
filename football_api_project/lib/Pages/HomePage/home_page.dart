@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:football_api_project/API/football_api.dart';
 import 'package:football_api_project/Pages/HomePage/Widgets/table_list_view_widget.dart';
+import 'package:football_api_project/Utils/constants.dart';
 import 'package:football_api_project/Widgets/table_info_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,13 +15,46 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-
     FootballAPI().getLeagueTable();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(selectedLeagueText),
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.black.withOpacity(0.3),
+        child: ListView.builder(
+          itemCount: allLeagueList.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                  selectedLeagueText = allLeagueList[index];
+                  FootballAPI().getLeagueTable();
+                  setState(() {});
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Text(
+                    allLeagueList[index],
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
       body: mainWidget(),
     );
   }
@@ -39,7 +73,7 @@ class _HomePageState extends State<HomePage> {
       future: FootballAPI().getLeagueTable(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Text(snapshot.connectionState.toString());
+          return Center(child: CircularProgressIndicator());
         } else {
           return const Column(
             children: [

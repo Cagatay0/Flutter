@@ -24,7 +24,8 @@ class FootballAPI {
 
   Future<bool> getLeagueTable() async {
     final response = await http.get(
-        Uri.parse('https://football98.p.rapidapi.com/premierleague/table'),
+        Uri.parse(
+            'https://football98.p.rapidapi.com/$selectedLeagueText/table'),
         headers: {
           'X-RapidAPI-Key': apiKey,
           'X-RapidAPI-Host': 'football98.p.rapidapi.com'
@@ -41,7 +42,7 @@ class FootballAPI {
   }
 
   getFixtures() async {
-    final responseFixtures = await http.get(
+    await http.get(
         Uri.parse('https://football98.p.rapidapi.com/premierleague/fixtures'),
         headers: {
           'X-RapidAPI-Key': apiKey,
