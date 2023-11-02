@@ -72,6 +72,7 @@ class _HomePageState extends State<HomePage> {
     return FutureBuilder(
       future: FootballAPI().getLeagueTable(),
       builder: (context, snapshot) {
+ConnectionState.
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(child: CircularProgressIndicator());
         } else {
