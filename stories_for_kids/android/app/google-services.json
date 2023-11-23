@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "621148187673",
+    "project_id": "stories-for-kids-af4f9",
+    "storage_bucket": "stories-for-kids-af4f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621148187673:android:74b9a315b8c8ea34f34e88",
+        "android_client_info": {
+          "package_name": "com.cagatayoney.stories_for_kids"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqOXJo8DwRAJwGUxt2bNnr5gfNeWa79qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
